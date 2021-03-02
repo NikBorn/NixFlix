@@ -7,12 +7,18 @@
 
 body {
   font-family: "Roboto Condensed", sans-serif;
+  line-height: 22px;
 }
 
 h1 {
   font-family: "Roboto Mono", monospace;
   color: #00adee;
-  margin: 10px 20px;
+}
+
+h2 {
+  font-size: 16px;
+  margin: 0 0 0 20px;
+  display: inline-block;
 }
 
 span {
@@ -32,6 +38,89 @@ header {
   border: 2px solid magenta;
 }
 
+h1,
+h3,
+p,
 header svg {
   margin: 10px 20px;
+}
+
+h2 + p {
+  display: inline-block;
+}
+
+section > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div:nth-child(2) {
+  justify-content: flex-start;
+  align-items: center;
+}
+
+div > svg {
+  margin-left: 20px;
+}
+
+svg + p {
+  margin: 0 0 0 4px;
+  font-size: 18px;
+}
+
+article {
+  max-width: 90vw;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  /* padding: 0 10px; */
+}
+
+.cast-photo {
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  width: 116px;
+  height: 93px;
+  margin-left: 20px;
+  margin-bottom: 60px;
+  padding-top: 80px;
+  display: inline-block;
+}
+
+.cast-photo > p {
+  /* background-color: lightgray; */
+  color: #000;
+  padding: 4px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.will-ferrell {
+  background-image: url("./images/WillFerrell.jpg");
+}
+
+.christina-applegate {
+  background-image: url("./images/ChristinaApplegate.jpg");
+}
+
+.steve-carell {
+  background-image: url("./images/SteveCarrell.jpg");
+  background-position: -20px 0;
+}
+
+.paul-rudd {
+  background-image: url("./images/PaulRudd.jpg");
+  background-position: -46px 0;
+}
+
+.david-koechner {
+  background-image: url("./images/DavidKoechner.jpg");
+  background-position: -46px 0;
+}
+
+.fred-willard {
+  background-image: url("./images/Fred-Willard.jpg");
 }
