@@ -1,3 +1,23 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+h1 {
+  font-family: "Roboto Mono", monospace;
+  color: #00adee;
+}
+
+span {
+  font-weight: 300;
+  color: black;
+}
+
 svg {
   width: 25px;
   height: 25px;
