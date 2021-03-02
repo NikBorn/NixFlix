@@ -2,6 +2,7 @@
 *:before,
 *:after {
   box-sizing: border-box;
+  margin: 0;
 }
 
 body {
@@ -11,6 +12,7 @@ body {
 h1 {
   font-family: "Roboto Mono", monospace;
   color: #00adee;
+  margin: 10px 20px;
 }
 
 span {
@@ -21,4 +23,15 @@ span {
 svg {
   width: 25px;
   height: 25px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid magenta;
+}
+
+header svg {
+  margin: 10px 20px;
 }
