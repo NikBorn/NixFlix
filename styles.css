@@ -8,6 +8,8 @@
 body {
   font-family: "Roboto Condensed", sans-serif;
   line-height: 22px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 h1 {
@@ -35,7 +37,11 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 2px solid magenta;
+  position: fixed;
+  z-index: 100000;
+  background-color: #ffffff;
+  width: 100vw;
+  max-width: 1000px;
 }
 
 h1,
@@ -49,15 +55,35 @@ h2 + p {
   display: inline-block;
 }
 
+section > section {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%;
+}
+
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  margin-top: 40px;
+}
+
 section > div {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-div:nth-child(2) {
+.rating-container {
   justify-content: flex-start;
   align-items: center;
+  display: flex;
+  margin-bottom: 20px;
 }
 
 div > svg {
@@ -70,12 +96,11 @@ svg + p {
 }
 
 article {
-  max-width: 90vw;
+  max-width: 86vw;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  /* padding: 0 10px; */
 }
 
 .cast-photo {
@@ -86,8 +111,11 @@ article {
   height: 30vw;
   margin-right: 20px;
   margin-bottom: 70px;
-  padding-top: 100px;
+  padding-top: 28vw;
   display: inline-block;
+  font-size: 12px;
+  flex-direction: column-reverse;
+  line-height: normal;
 }
 
 .cast-photo > p {
@@ -108,17 +136,17 @@ article {
 
 .steve-carell {
   background-image: url("./images/SteveCarrell.jpg");
-  background-position: -20px 0;
+  background-position: -40px 0;
 }
 
 .paul-rudd {
   background-image: url("./images/PaulRudd.jpg");
-  background-position: -46px 0;
+  background-position: -70px 0;
 }
 
 .david-koechner {
   background-image: url("./images/DavidKoechner.jpg");
-  background-position: -46px 0;
+  background-position: -70px 0;
 }
 
 .fred-willard {
@@ -143,9 +171,10 @@ h3 + section {
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 10px;
-  width: 138px;
-  height: 204px;
+  width: 35vw;
+  height: 48vw;
   margin-bottom: 20px;
+  flex: 1 1 1;
 }
 
 .step-brothers {
@@ -185,4 +214,116 @@ ul {
 li {
   list-style-type: none;
   font-size: 14px;
+}
+
+@media only screen and (min-width: 650px) {
+  .cast-photo {
+    width: 25vw;
+    height: 25vw;
+  }
+
+  .will-ferrell {
+    background-position: -50px 0;
+  }
+
+  .christina-applegate {
+    background-position: -50px 0;
+  }
+
+  .steve-carell {
+    background-position: -75px 0;
+  }
+
+  .paul-rudd {
+    background-position: -150px 0;
+  }
+
+  .david-koechner {
+    background-position: -140px 0;
+  }
+
+  .fred-willard {
+    background-image: url("./images/Fred-Willard.jpg");
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  article {
+    max-width: 74vw;
+    justify-content: space-between;
+    /* padding-top: 125px; */
+    max-height: ;
+  }
+
+  .cast-photo {
+    width: 20vw;
+    height: 20vw;
+    padding-top: 20vw;
+    background-position: 0 0;
+  }
+
+  .will-ferrell {
+    background-position: 0 0;
+  }
+
+  .christina-applegate {
+    background-position: -30px 0;
+  }
+
+  .paul-rudd {
+    background-position: -100px 0;
+  }
+
+  .steve-carell {
+    background-position: -40px 0;
+  }
+
+  .david-koechner {
+    background-position: -100px 0;
+  }
+
+  .suggested-movie {
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    width: 20vw;
+    height: 27.4vw;
+    margin-bottom: 20px;
+    flex: 1 1 1;
+  }
+}
+
+@media only screen and (min-width: 850px) {
+  .suggested-movie {
+    flex-wrap: nowrap;
+    width: 208px;
+    height: 285px;
+  }
+
+  .cast-photo {
+    width: 85px;
+    height: 85px;
+    padding-top: 85px;
+  }
+
+  .christina-applegate {
+    background-position: -10px 0;
+  }
+
+  .paul-rudd {
+    background-position: -60px 0;
+  }
+
+  .steve-carell {
+    background-position: -25px 0;
+  }
+
+  .david-koechner {
+    background-position: -50px 0;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  header {
+  }
 }
